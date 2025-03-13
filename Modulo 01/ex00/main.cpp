@@ -6,7 +6,7 @@
 /*   By: jaimecondea <jaimecondea@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/01 18:43:38 by jaimecondea       #+#    #+#             */
-/*   Updated: 2025/02/01 18:43:50 by jaimecondea      ###   ########.fr       */
+/*   Updated: 2025/03/10 19:32:27 by jaimecondea      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int main()
     // 1️⃣ Crear un Zombie en el heap con newZombie() y eliminarlo manualmente
     Zombie* heapZombie= newZombie("HeapZombie");
     heapZombie->announce();
-    delete heapZombie;
+    delete heapZombie;  ///sino lo eliminamos hay fuga de memoria
      std::cout << "--------------------------" << std::endl;
 
     // 2️⃣ Crear un Zombie en el stack con randomChump()

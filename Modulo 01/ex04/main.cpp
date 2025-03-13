@@ -6,13 +6,13 @@
 /*   By: jaimecondea <jaimecondea@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 21:57:48 by jaimecondea       #+#    #+#             */
-/*   Updated: 2025/02/05 08:30:41 by jaimecondea      ###   ########.fr       */
+/*   Updated: 2025/03/13 17:13:32 by jaimecondea      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string>
 #include <iostream>
-#include <fstream>
+#include <fstream>  //nos usamos la función 
 
 
 int main(int argc, char **argv){ //recibe 3 param :nombre de un archivo
@@ -29,7 +29,8 @@ int main(int argc, char **argv){ //recibe 3 param :nombre de un archivo
    		return 1;
 	}
 
-	std::ifstream inputFile(argv [1]); // Intentamos abrir el archivo Aqui uso la clase std::ifstream de la librerí <fstream>
+	std::ifstream inputFile(file); /* Intentamos abrir el archivo Aqui uso la clase std::ifstream de la librería <fstream>. 
+                                    crea el objeto inputFile que se carga con lo que abre con lo que se le pasa con file*/
 								//instancio en inputFile la clase de manera que tengo un objeto de esta clase llamado inputFile	
     if (!inputFile) { // Si no se pudo abrir
         std::cerr << "Error: No se pudo abrir el archivo '" << file << "'\n";
@@ -45,16 +46,16 @@ int main(int argc, char **argv){ //recibe 3 param :nombre de un archivo
         inputFile.close();
         return 1;
     }
- std::string line; // Aquí voy a copiar linea linea lo que hay en el archivo
-    while (std::getline(inputFile, line)) { // Leer línea por línea
-        size_t pos = 0;
-        while ((pos = line.find(s1, pos)) != std::string::npos) { // Buscar `s1`
-            line.erase(pos, s1.length()); // Eliminar `s1`
-            line.insert(pos, s2); // Insertar `s2`
-            pos += s2.length(); // Mover el índice después de `s2`
+    std::string line; // Aquí voy a copiar linea linea lo que hay en el archivo
+        while (std::getline(inputFile, line)) { // Leer línea por línea y no hay que incrementar nada
+            size_t pos = 0;
+            while ((pos = line.find(s1, pos)) != std::string::npos) { // Buscar `s1`  //si find(s1, pos) no encuentra s1 devuelve td::string::npos 
+                line.erase(pos, s1.length()); // Eliminar `s1`
+                line.insert(pos, s2); // Insertar `s2`
+                pos += s2.length(); // Mover el índice después de `s2`
+            }
+            outputFile << line << '\n'; // Escribir línea modificada en `file2`
         }
-        outputFile << line << '\n'; // Escribir línea modificada en `file2`
-    }
 
 	inputFile.close();
 	outputFile.close();

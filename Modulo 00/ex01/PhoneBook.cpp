@@ -36,7 +36,7 @@ void PhoneBook::searchContacts() const
         std::cout << "No Contact in the phonebook." << std::endl;
         return;
     }
-    std::cout << "| Index    |First Name|Last Name | Nickname |" << std::endl;
+    std::cout << "| Index    |First Name |Last Name | Nickname |" << std::endl;
     for ( size_t i= 0 ; i< (contactCount < 8 ? contactCount : 8);i++)
         {
             contacts[i].displaySummary(i);
@@ -47,10 +47,10 @@ void PhoneBook::searchContacts() const
     while (!(std::cin >> index)) 
         {
             std::cin.clear(); // Restablece el estado de std::cin
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Limpia la entrada
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Limpia el buffer de la entrada erronea
             std::cerr << "Invalid input! Please enter a valid number: ";
         }
-    std::cin.ignore();
+    std::cin.ignore(); //Limpia la entrada del número
 
     if (index <0 || index >= (int) (contactCount < 8 ? contactCount : 8))
     {

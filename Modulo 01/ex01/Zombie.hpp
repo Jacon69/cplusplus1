@@ -6,7 +6,7 @@
 /*   By: jaimecondea <jaimecondea@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/01 18:42:55 by jaimecondea       #+#    #+#             */
-/*   Updated: 2025/02/02 06:55:53 by jaimecondea      ###   ########.fr       */
+/*   Updated: 2025/03/13 14:09:48 by jaimecondea      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ class Zombie
 };
 
 
-// Externas  Estas funciones usan la clase pero no modifican atributos no tiene acceso a private
+// Externas  Estas funciones usan la clase pero no modifican atributos no tiene acceso a private. aunque a través de los metodos publicos si modifican atributos
    Zombie* zombieHorde( int N, std::string name );
 
 #endif
