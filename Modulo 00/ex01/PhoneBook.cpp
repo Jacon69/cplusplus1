@@ -7,15 +7,15 @@ void PhoneBook::addContact()
     std::string first, last, nick, phone, secret;
 
     std::cout << "Enter Firs Name:";
-    std::getline(std::cin, first);
+    if (!std::getline(std::cin, first)) return;
     std::cout << "Enter Last Name:";
-    std::getline(std::cin, last);
+    if (!std::getline(std::cin, last)) return;
     std::cout << "Enter Nickname:";
-    std::getline(std::cin, nick);
+    if (!std::getline(std::cin, nick)) return;
     std::cout << "Enter phone number:";
-    std::getline(std::cin, phone);
+    if (!std::getline(std::cin, phone)) return;
     std::cout << "Enter Darkest Secret:";
-    std::getline(std::cin, secret);
+    if (!std::getline(std::cin, secret)) return;
     Contact newContact;
     newContact.setContactInfo(first, last, nick, phone, secret);
 
@@ -36,7 +36,7 @@ void PhoneBook::searchContacts() const
         std::cout << "No Contact in the phonebook." << std::endl;
         return;
     }
-    std::cout << "| Index    |First Name |Last Name | Nickname |" << std::endl;
+    std::cout << "| Index    |First Name|Last Name | Nickname |" << std::endl;
     for ( size_t i= 0 ; i< (contactCount < 8 ? contactCount : 8);i++)
         {
             contacts[i].displaySummary(i);
