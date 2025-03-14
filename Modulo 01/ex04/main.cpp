@@ -6,7 +6,7 @@
 /*   By: jaimecondea <jaimecondea@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 21:57:48 by jaimecondea       #+#    #+#             */
-/*   Updated: 2025/03/13 17:13:32 by jaimecondea      ###   ########.fr       */
+/*   Updated: 2025/03/14 12:07:36 by jaimecondea      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,10 @@ int main(int argc, char **argv){ //recibe 3 param :nombre de un archivo
    		return 1;
 	}
 
-	std::ifstream inputFile(file); /* Intentamos abrir el archivo Aqui uso la clase std::ifstream de la librería <fstream>. 
+	std::ifstream inputFile(argv[1]);     /* Intentamos abrir el archivo Aqui uso la clase std::ifstream de la librería <fstream>. no puedo usar file ya que ifstring no admite std::string como argumento
                                     crea el objeto inputFile que se carga con lo que abre con lo que se le pasa con file*/
 								//instancio en inputFile la clase de manera que tengo un objeto de esta clase llamado inputFile	
-    if (!inputFile) { // Si no se pudo abrir
+    if (!inputFile) {            // Si no se pudo abrir
         std::cerr << "Error: No se pudo abrir el archivo '" << file << "'\n";
         return 1;
     }
