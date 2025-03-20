@@ -7,9 +7,16 @@ int main()
     while(true)
     {
         std::cout << "Enter a command (ADD, SEARCH, EXIT): ";
+          
         if (!std::getline(std::cin, command)) {
-            break;
+            if (std::cin.eof()) {  // 🔹 Detectar EOF y salir completamente del programa
+                std::cout << "\nEOF detected." << std::endl;
+                break; // 🔹 Sale del bucle principal en lugar de continuar en un ciclo infinito
             }
+            std::cin.clear();  // 🔹 Restablece el estado de cin
+            continue;  // 🔹 Evita continuar con una entrada inválida
+        }
+        
         if (command== "ADD")
         {
             phonebook.addContact();

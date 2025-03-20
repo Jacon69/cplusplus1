@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jaimecondea <jaimecondea@student.42.fr>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/03/14 18:03:33 by jaimecondea       #+#    #+#             */
+/*   Updated: 2025/03/14 18:04:01 by jaimecondea      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef FIXED_HPP
 #define FIXED_HPP
 
@@ -10,7 +22,7 @@ class Fixed{
 
 private:
 int value;
-static const  int nBit= 8;
+static const  int nBit = 8;
 
 public:
     // 1. Constructor por defecto

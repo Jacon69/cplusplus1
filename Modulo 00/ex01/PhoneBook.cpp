@@ -46,9 +46,16 @@ void PhoneBook::searchContacts() const
 
     while (!(std::cin >> index)) 
         {
+                if (std::cin.eof()) {  // 🔹 Detectar `Ctrl+D`
+                    //std::cout << "\nEOF detected. Returning to menu." << std::endl;
+                    std::cin.clear();
+                    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                    return;
+                    }
             std::cin.clear(); // Restablece el estado de std::cin
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Limpia el buffer de la entrada erronea
             std::cerr << "Invalid input! Please enter a valid number: ";
+            return;
         }
     std::cin.ignore(); //Limpia la entrada del número
 

@@ -6,7 +6,7 @@
 /*   By: jaimecondea <jaimecondea@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/02 12:08:18 by jaimecondea       #+#    #+#             */
-/*   Updated: 2025/02/02 22:31:49 by jaimecondea      ###   ########.fr       */
+/*   Updated: 2025/03/14 11:40:59 by jaimecondea      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ public:
 	Weapon(); // Constructor sin tipo
 	Weapon(std::string type); // constructor con typo
 	~Weapon();
-	std::string getType() const;
-	void setType(std::string newType);
+	const std::string& getType() const;
+	void setType(const std::string& newType);
 };
 
 

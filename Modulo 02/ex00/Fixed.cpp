@@ -1,20 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Fixed.cpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jaimecondea <jaimecondea@student.42.fr>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/03/14 18:03:38 by jaimecondea       #+#    #+#             */
+/*   Updated: 2025/03/14 18:13:17 by jaimecondea      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Fixed.hpp"
 
 // 1. Constructor por defecto
 Fixed::Fixed() : value(0) {
     std::cout << "Default constructor called" << std::endl;
-}
-
-// 2. Constructor con enteros (Convierte un int a punto fijo)
-Fixed::Fixed(int num) {
-    std::cout << "Int constructor called" << std::endl;
-    value = num << nBit;  // Multiplica por 2^8 (256)
-}
-
-// 3. Constructor con flotantes (Convierte un float a punto fijo)
-Fixed::Fixed(float num) {
-    std::cout << "Float constructor called" << std::endl;
-    value = static_cast<int>(roundf(num * (1 << nBit)));  // Multiplica por 2^8 y redondea . no se puede aplicar el desplazamiento de bit con num no enteros
 }
 
 // 4. Constructor de copia

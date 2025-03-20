@@ -6,7 +6,7 @@
 /*   By: jaimecondea <jaimecondea@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/02 21:19:01 by jaimecondea       #+#    #+#             */
-/*   Updated: 2025/02/02 22:38:35 by jaimecondea      ###   ########.fr       */
+/*   Updated: 2025/03/14 11:45:53 by jaimecondea      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ public:
 	HumanA(std::string name, Weapon& weapon); //Se inicaliza con un arma
 	~HumanA();
 	void attack() const;
+	void setWeapon(Weapon& newWeapon); 
 };
 
 #endif

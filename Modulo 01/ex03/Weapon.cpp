@@ -11,10 +11,10 @@ Weapon::~Weapon()
 	std::cerr << "DEBUG " << "el arma " << type << " ha sido destruida 💀" << std::endl;
 }
 
-std::string Weapon::getType()const {
+const std::string& Weapon::getType()const {
 	return type;
 }
 
-void	Weapon::setType(std::string newType){
+void	Weapon::setType(const std::string& newType){
 	type = newType;
 }

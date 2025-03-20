@@ -6,7 +6,7 @@
 /*   By: jaimecondea <jaimecondea@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/02 21:22:00 by jaimecondea       #+#    #+#             */
-/*   Updated: 2025/02/02 22:45:13 by jaimecondea      ###   ########.fr       */
+/*   Updated: 2025/03/14 11:46:03 by jaimecondea      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,4 +23,6 @@ void HumanA::attack()const {
     std::cout << name << " attacks with their " << weapon.getType() << std::endl;
 }
 
-
+void HumanA::setWeapon(Weapon& newWeapon) {
+    weapon = newWeapon;
+}

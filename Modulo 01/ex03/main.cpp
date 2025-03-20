@@ -6,7 +6,7 @@
 /*   By: jaimecondea <jaimecondea@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/02 22:23:15 by jaimecondea       #+#    #+#             */
-/*   Updated: 2025/02/02 22:35:19 by jaimecondea      ###   ########.fr       */
+/*   Updated: 2025/03/14 11:51:16 by jaimecondea      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,6 @@ int main(){
 	HumanA bob("Bob", club);
 	bob.attack();
 	club.setType("some other type of club");
+	bob.setWeapon(club);  // 🔹 Asegurar que `HumanA` ve el cambio
 	bob.attack();
 }
